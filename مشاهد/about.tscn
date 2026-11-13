@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://d2v4bbea31s51"]
+
+[ext_resource type="Script" uid="uid://uv5jm4hiakr0" path="res://script/about.gd" id="1_qnbo4"]
+[ext_resource type="Texture2D" uid="uid://16oxyucry43b" path="res://others/channels4_profile.jpg" id="1_qxfnd"]
+
+[node name="Node2D" type="Node2D" unique_id=679134933]
+script = ExtResource("1_qnbo4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1343228436]
+position = Vector2(0, -18)
+scale = Vector2(0.34805155, 0.33142835)
+texture = ExtResource("1_qxfnd")
+
+[node name="Label" type="Label" parent="." unique_id=1766867688]
+offset_left = -66.0
+offset_top = 9.0
+offset_right = 62.0
+offset_bottom = 33.0
+text = "MADE BY GHASTY"
+
+[node name="Label2" type="Label" parent="." unique_id=457339523]
+offset_left = -126.0
+offset_top = 33.0
+offset_right = 533.0
+offset_bottom = 138.0
+text = "this game about a person go to
+ the prenses to safe us but go to
+ the danger forest
+30 level to win the game very hard 
+"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1416153431]
+position = Vector2(0, 51)
+zoom = Vector2(3, 3)
+
+[node name="Button" type="Button" parent="." unique_id=1393743475]
+offset_left = -167.0
+offset_top = -45.0
+offset_right = -124.0
+offset_bottom = -13.0
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

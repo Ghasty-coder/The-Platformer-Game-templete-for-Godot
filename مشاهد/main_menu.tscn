@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://bfa5r3qbobe1o"]
+
+[ext_resource type="Script" uid="uid://bdvg6msompqaw" path="res://script/main menu.gd" id="1_ah3ir"]
+[ext_resource type="FontFile" uid="uid://c640id7k5l6oc" path="res://others/PixelAE-Regular.ttf" id="2_o2s0u"]
+[ext_resource type="Texture2D" uid="uid://d07a3t6336kr2" path="res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/kEePYJ.png" id="3_o2s0u"]
+
+[node name="MainMenu" type="Control" unique_id=217979523]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 110.0
+offset_top = 65.0
+offset_right = 150.0
+offset_bottom = 95.0
+script = ExtResource("1_ah3ir")
+first_level_scene = "uid://cymuubybdcfyv"
+
+[node name="KEePyj" type="Sprite2D" parent="." unique_id=1396563375]
+position = Vector2(1.0000076, -43.000004)
+scale = Vector2(0.18571429, 0.18607143)
+texture = ExtResource("3_o2s0u")
+
+[node name="Label2" type="Label" parent="." unique_id=1079052728]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 77.0
+offset_right = 81.0
+offset_bottom = 101.0
+
+[node name="Label" type="Label" parent="." unique_id=810971155]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 171.0
+offset_top = -124.0
+offset_right = 211.0
+offset_bottom = -100.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1435919981]
+position = Vector2(24, 30)
+zoom = Vector2(2, 2)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1537688142]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 30.0
+offset_right = 81.0
+offset_bottom = 163.0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=1083475623]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_o2s0u")
+theme_override_font_sizes/font_size = 23
+text = "play"
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1808362790]
+layout_mode = 2
+text = "About me"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=1279647951]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_o2s0u")
+theme_override_font_sizes/font_size = 20
+text = "Quit"
+
+[node name="OptionButton" type="OptionButton" parent="." unique_id=1806807733]
+layout_mode = 0
+offset_left = 94.0
+offset_top = -60.0
+offset_right = 285.0
+offset_bottom = -29.0
+item_count = 3
+popup/item_0/text = "The forest platform"
+popup/item_0/id = 0
+popup/item_1/text = "the glitch demo"
+popup/item_1/id = 1
+popup/item_2/text = "test"
+popup/item_2/id = 2
+
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
